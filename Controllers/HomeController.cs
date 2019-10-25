@@ -15,14 +15,14 @@ namespace Caas_ProjectTracker.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "CAAS Project Tracking Portal (CPTP)";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "For General Info:";
 
             return View();
         }

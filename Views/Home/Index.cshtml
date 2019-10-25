@@ -3,29 +3,32 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>CAAS Application</h1>
+    <p class="lead">This application is utilized by CAAS associates to input potentional new customers and track existing projects.</p>
+    <p><a href="~/Home/About" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Step 1: Company</h2>
+        <p><a class="btn btn-default" href="~/CompanyLists/Index">Review List of Companies &raquo;</a></p>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Here you can lookup company contact information and confirm a company is listed. 
+            A company must be listed before entering customer information. If the company is
+            listed, proceed to step 2.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Step 2: Customers</h2>
+        <p><a class="btn btn-default" href="~/Customers/Index">Review List of Customers &raquo;</a></p>
+        <p>Enter customer information for possible contracts and opportunities here. There may be multiple customers from one company.</p>
+        
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Step 3: Projects</h2>
+        <p><a class="btn btn-default" href="~/Projects/Index">Review List of Projects/Contracts &raquo;</a></p>
+        <p>List of projects and contracts showing which are active as well as pipeline probability.</p>
+        
     </div>
 </div>

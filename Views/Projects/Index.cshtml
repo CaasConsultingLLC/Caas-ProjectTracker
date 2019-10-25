@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Caas_ProjectTracker.Models.Project>
+
+@{
+    ViewBag.Title = "Projects";
+}
+
+<h2>Projects</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Probability)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OfferAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DurationMonths)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpectedStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpectedFinish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.ContactName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusList.StatusName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Probability)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OfferAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DurationMonths)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpectedStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpectedFinish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.ContactName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StatusList.StatusName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProjectID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProjectID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProjectID })
+        </td>
+    </tr>
+}
+
+</table>

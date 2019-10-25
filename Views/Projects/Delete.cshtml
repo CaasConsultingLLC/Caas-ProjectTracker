@@ -1,0 +1,128 @@
+﻿@model Caas_ProjectTracker.Models.Project
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Project</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Probability)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Probability)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfferAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfferAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DurationMonths)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DurationMonths)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpectedStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpectedStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpectedFinish)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpectedFinish)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Created)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Created)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modified)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modified)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.ContactName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.ContactName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusList.StatusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusList.StatusName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
