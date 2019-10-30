@@ -17,7 +17,10 @@
             A company must be listed before entering customer information. If the company is
             listed, proceed to step 2.
         </p>
-        
+        @using (Html.BeginForm("Index", "CompanyLists", FormMethod.Get)){
+            <p>@Html.TextBox("SearchString") 
+            <input type="submit" value="Search Company" /></p>
+        }
     </div>
     <div class="col-md-4">
         <h2>Step 2: Customers</h2>
@@ -27,7 +30,7 @@
     </div>
     <div class="col-md-4">
         <h2>Step 3: Projects</h2>
-        <p><a class="btn btn-default" href="~/Projects/Index">Review List of Projects/Contracts &raquo;</a></p>
+        <p><a class="btn btn-default" href="~/Projects/Index">Review Projects/Contracts &raquo;</a></p>
         <p>List of projects and contracts showing which are active as well as pipeline probability.</p>
         <div class="demo-section k-content">
 

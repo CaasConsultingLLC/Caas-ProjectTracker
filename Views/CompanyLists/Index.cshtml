@@ -4,13 +4,25 @@
     ViewBag.Title = "Companies";
 }
 
-<h2>Company List</h2>
-<p><a class="btn btn-default" href="~/Customers/Index">Step 2: Customers &raquo;</a></p>
+<h2>Step 1: Company List        <a class="btn btn-default" href="~/Customers/Index">Step 2: Customers &raquo;</a></h2>
+
 <p>
     @Html.ActionLink("Create New", "Create")
+
+        @using (Html.BeginForm("Index", "CompanyLists", FormMethod.Get))
+        {
+            <p>
+                State: @Html.DropDownList("companyState", "All")
+                Company: @Html.TextBox("SearchString") 
+            <input type="submit" value="Search" />
+            </p>
+        }
 </p>
 <table class="table">
     <tr>
+        <th>
+            <p>Functions</p>
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.CompanyName)
         </th>
@@ -44,6 +56,11 @@
 @foreach (var item in Model) {
 <tr>
     <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.CompanyID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.CompanyID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.CompanyID })
+    </td>    
+    <td>
         @Html.DisplayFor(modelItem => item.CompanyName)
     </td>
     <td>
@@ -69,11 +86,6 @@
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.Notes)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.CompanyID }) |
-        @Html.ActionLink("Details", "Details", new { id = item.CompanyID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.CompanyID })
     </td>
 </tr>
 }

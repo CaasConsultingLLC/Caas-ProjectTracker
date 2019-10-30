@@ -15,15 +15,29 @@ namespace Caas_ProjectTracker.Controllers
         private CaasConsultingllcEntities db = new CaasConsultingllcEntities();
 
         // GET: CompanyLists
-        public ActionResult Index(string id)
+        public ActionResult Index(string companyState, string searchString)
         {
-            string searchString = id;
+            var StateLst = new List<string>();
+
+            var StateQry = from d in db.CompanyLists
+                             orderby d.State
+                             select d.State;
+
+            StateLst.AddRange(StateQry.Distinct());
+            ViewBag.companyState = new SelectList(StateLst);
+            
             var companyLists = from m in db.CompanyLists
                                select m;
             if (!String.IsNullOrEmpty(searchString))
             {
                 companyLists = companyLists.Where(s => s.CompanyName.Contains(searchString));
             }
+
+            if (!String.IsNullOrEmpty(companyState))
+            {
+                companyLists = companyLists.Where(x => x.State == companyState);
+            }
+
             return View(companyLists);
         }
 
