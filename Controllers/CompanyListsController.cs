@@ -24,7 +24,7 @@ namespace Caas_ProjectTracker.Controllers
             {
                 companyLists = companyLists.Where(s => s.CompanyName.Contains(searchString));
             }
-            return View(db.CompanyLists.ToList());
+            return View(companyLists);
         }
 
         // GET: CompanyLists/Details/5
