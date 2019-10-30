@@ -11,11 +11,27 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.CompanyList.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyList.CompanyName)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.ContactName)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.ContactName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Probability)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Probability)
         </dd>
 
         <dt>
@@ -88,14 +104,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Notes)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CompanyList.CompanyName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CompanyList.CompanyName)
         </dd>
 
     </dl>

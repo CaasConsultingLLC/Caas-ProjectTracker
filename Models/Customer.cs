@@ -32,6 +32,7 @@ namespace Caas_ProjectTracker.Models
         public byte[] Photo { get; set; }
         public string Notes { get; set; }
         public string State { get; set; }
+        public Nullable<int> Probability { get; set; }
     
         public virtual CompanyList CompanyList { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

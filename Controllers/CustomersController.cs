@@ -48,7 +48,7 @@ namespace Caas_ProjectTracker.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerID,CompanyID,ContactName,Email,Address,City,State,Country,PostalCode,Phone,Photo,Notes")] Customer customer)
+        public ActionResult Create([Bind(Include = "CustomerID,CompanyID,Probability,ContactName,Email,Address,City,State,Country,PostalCode,Phone,Photo,Notes")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace Caas_ProjectTracker.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CustomerID,CompanyID,ContactName,Email,Address,City,State,Country,PostalCode,Phone,Photo,Notes")] Customer customer)
+        public ActionResult Edit([Bind(Include = "CustomerID,CompanyID,Probability,ContactName,Email,Address,City,State,Country,PostalCode,Phone,Photo,Notes")] Customer customer)
         {
             if (ModelState.IsValid)
             {
