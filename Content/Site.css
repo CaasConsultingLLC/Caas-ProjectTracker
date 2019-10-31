@@ -9,6 +9,10 @@
     padding-right: 15px;
 }
 
+.navbar-inverse {
+    background-color: #24cae0 !important;
+}
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
