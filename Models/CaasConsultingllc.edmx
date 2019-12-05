@@ -45,7 +45,7 @@
           <Property Name="ProjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CustomerID" Type="int" />
           <Property Name="ProjectName" Type="nvarchar" MaxLength="40" Nullable="false" />
-          <Property Name="Probability" Type="int" />
+          <Property Name="ProjectProbability" Type="int" />
           <Property Name="StatusID" Type="int" />
           <Property Name="OfferAmount" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="DurationMonths" Type="nvarchar" MaxLength="40" Nullable="false" />
@@ -176,7 +176,6 @@
           <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CustomerID" Type="Int32" />
           <Property Name="ProjectName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Probability" Type="Int32" />
           <Property Name="StatusID" Type="Int32" />
           <Property Name="OfferAmount" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DurationMonths" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
@@ -189,6 +188,7 @@
           <Property Name="ModifiedBy" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Customer" Relationship="Self.FK_Projects_Customers" FromRole="Projects" ToRole="Customers" />
           <NavigationProperty Name="StatusList" Relationship="Self.FK_Projects_StatusList" FromRole="Projects" ToRole="StatusList" />
+          <Property Name="ProjectProbability" Type="Int32" />
         </EntityType>
         <EntityType Name="StatusList">
           <Key>
@@ -307,10 +307,10 @@
           <EntitySetMapping Name="Projects">
             <EntityTypeMapping TypeName="CaasConsultingllcModel.Project">
               <MappingFragment StoreEntitySet="Projects">
+                <ScalarProperty Name="ProjectProbability" ColumnName="ProjectProbability" />
                 <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
-                <ScalarProperty Name="Probability" ColumnName="Probability" />
                 <ScalarProperty Name="StatusID" ColumnName="StatusID" />
                 <ScalarProperty Name="OfferAmount" ColumnName="OfferAmount" />
                 <ScalarProperty Name="DurationMonths" ColumnName="DurationMonths" />

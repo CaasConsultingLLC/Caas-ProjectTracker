@@ -17,7 +17,6 @@ namespace Caas_ProjectTracker.Models
         public int ProjectID { get; set; }
         public Nullable<int> CustomerID { get; set; }
         public string ProjectName { get; set; }
-        public Nullable<int> Probability { get; set; }
         public Nullable<int> StatusID { get; set; }
         public string OfferAmount { get; set; }
         public string DurationMonths { get; set; }
@@ -28,6 +27,7 @@ namespace Caas_ProjectTracker.Models
         public Nullable<System.DateTime> Modified { get; set; }
         public string CreatedBy { get; set; }
         public string ModifiedBy { get; set; }
+        public Nullable<int> ProjectProbability { get; set; }
     
         public virtual Customer Customer { get; set; }
         public virtual StatusList StatusList { get; set; }
