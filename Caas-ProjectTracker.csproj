@@ -1596,11 +1596,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\CompanyLists\Create.cshtml" />
-    <Content Include="Views\CompanyLists\Delete.cshtml" />
-    <Content Include="Views\CompanyLists\Details.cshtml" />
-    <Content Include="Views\CompanyLists\Edit.cshtml" />
-    <Content Include="Views\CompanyLists\Index.cshtml" />
     <Content Include="Views\Customers\Create.cshtml" />
     <Content Include="Views\Customers\Delete.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
@@ -2590,6 +2585,11 @@
     <Content Include="Scripts\kendo\messages\kendo.messages.zh-CN.min.js.map" />
     <Content Include="Scripts\kendo\messages\kendo.messages.zh-HK.min.js.map" />
     <Content Include="Scripts\kendo\messages\kendo.messages.zh-TW.min.js.map" />
+    <Content Include="Views\CompanyLists\Create.cshtml" />
+    <Content Include="Views\CompanyLists\Delete.cshtml" />
+    <Content Include="Views\CompanyLists\Details.cshtml" />
+    <Content Include="Views\CompanyLists\Edit.cshtml" />
+    <Content Include="Views\CompanyLists\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

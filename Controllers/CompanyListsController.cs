@@ -15,30 +15,9 @@ namespace Caas_ProjectTracker.Controllers
         private CaasConsultingllcEntities db = new CaasConsultingllcEntities();
 
         // GET: CompanyLists
-        public ActionResult Index(string companyState, string searchString)
+        public ActionResult Index()
         {
-            var StateLst = new List<string>();
-
-            var StateQry = from d in db.CompanyLists
-                             orderby d.State
-                             select d.State;
-
-            StateLst.AddRange(StateQry.Distinct());
-            ViewBag.companyState = new SelectList(StateLst);
-            
-            var companyLists = from m in db.CompanyLists
-                               select m;
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                companyLists = companyLists.Where(s => s.CompanyName.Contains(searchString));
-            }
-
-            if (!String.IsNullOrEmpty(companyState))
-            {
-                companyLists = companyLists.Where(x => x.State == companyState);
-            }
-
-            return View(companyLists);
+            return View(db.CompanyLists.ToList());
         }
 
         // GET: CompanyLists/Details/5
@@ -67,7 +46,7 @@ namespace Caas_ProjectTracker.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CompanyID,CompanyName,CorporateAddress,City,State,Country,PostalCode,Phone,Website,Notes")] CompanyList companyList)
+        public ActionResult Create([Bind(Include = "CompanyID,CompanyName,CorporateAddress,City,Country,PostalCode,Phone,Website,Notes,State")] CompanyList companyList)
         {
             if (ModelState.IsValid)
             {
@@ -99,7 +78,7 @@ namespace Caas_ProjectTracker.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CompanyID,CompanyName,CorporateAddress,City,State,Country,PostalCode,Phone,Website,Notes")] CompanyList companyList)
+        public ActionResult Edit([Bind(Include = "CompanyID,CompanyName,CorporateAddress,City,Country,PostalCode,Phone,Website,Notes,State")] CompanyList companyList)
         {
             if (ModelState.IsValid)
             {
